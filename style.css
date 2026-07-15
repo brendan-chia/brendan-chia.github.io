@@ -250,6 +250,14 @@ section {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
 }
 
+.hero-views {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  opacity: 0;
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -828,12 +836,6 @@ section {
   font-size: 0.8rem;
   color: rgba(250, 247, 243, 0.25);
   letter-spacing: 0.01em;
-}
-
-.footer-views {
-  margin: 0;
-  font-size: 0.85rem;
-  color: rgba(250, 247, 243, 0.55);
 }
 
 /* ============================================
