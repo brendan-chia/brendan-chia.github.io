@@ -250,14 +250,6 @@ section {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards;
 }
 
-.hero-views {
-  margin-top: 20px;
-  font-size: 0.85rem;
-  color: var(--text-tertiary);
-  opacity: 0;
-  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -836,6 +828,18 @@ section {
   font-size: 0.8rem;
   color: rgba(250, 247, 243, 0.25);
   letter-spacing: 0.01em;
+}
+
+.view-counter {
+  min-width: 72px;
+  padding: 9px 18px;
+  border: 1px solid rgba(250, 247, 243, 0.1);
+  border-radius: var(--radius-pill);
+  background: rgba(250, 247, 243, 0.06);
+  color: rgba(250, 247, 243, 0.7);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ============================================

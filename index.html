@@ -71,7 +71,6 @@
             GitHub
           </a>
         </div>
-        <p id="portfolio-views" class="hero-views" aria-live="polite">👁 Loading views…</p>
       </div>
     </div>
     <div class="hero-scroll-indicator">
@@ -316,6 +315,9 @@
           </a>
         </div>
         <div class="footer-divider"></div>
+        <div class="view-counter" aria-label="Portfolio views">
+          <span id="portfolio-views" aria-live="polite">—</span>
+        </div>
         <p class="footer-bottom">© 2026 Brendan Chia. Built with care.</p>
       </div>
     </div>
@@ -402,10 +404,10 @@
         }
 
         const { views } = await response.json();
-        display.textContent = `👁 ${Number(views).toLocaleString()} portfolio views`;
+        display.textContent = Number(views).toLocaleString();
       } catch (error) {
         console.error('View counter failed:', error);
-        display.textContent = '👁 Portfolio views unavailable';
+        display.textContent = '—';
       }
     }
 
