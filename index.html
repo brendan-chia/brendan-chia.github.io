@@ -315,6 +315,7 @@
           </a>
         </div>
         <div class="footer-divider"></div>
+        <p id="portfolio-views" class="footer-views" aria-live="polite">👁 Loading views…</p>
         <p class="footer-bottom">© 2026 Brendan Chia. Built with care.</p>
       </div>
     </div>
@@ -385,6 +386,30 @@
         navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
       }
     }, { passive: true });
+
+    // Portfolio view counter
+    async function updatePortfolioViews() {
+      const display = document.getElementById('portfolio-views');
+
+      try {
+        const response = await fetch(
+          'https://xdizucbyopjvvqvzdfcg.supabase.co/functions/v1/portfolio-view',
+          { method: 'POST' }
+        );
+
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
+
+        const { views } = await response.json();
+        display.textContent = `👁 ${Number(views).toLocaleString()} portfolio views`;
+      } catch (error) {
+        console.error('View counter failed:', error);
+        display.textContent = '👁 Portfolio views unavailable';
+      }
+    }
+
+    updatePortfolioViews();
   </script>
 
 </body>

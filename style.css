@@ -830,6 +830,12 @@ section {
   letter-spacing: 0.01em;
 }
 
+.footer-views {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(250, 247, 243, 0.55);
+}
+
 /* ============================================
    SCROLL ANIMATIONS
    ============================================ */
